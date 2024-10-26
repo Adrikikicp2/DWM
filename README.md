@@ -25,9 +25,7 @@ In a more aesthetic way, it should be represented as:
 DWM
 
 +---udwm
-
 |
-
 +---windowmanager
 
 # Building
