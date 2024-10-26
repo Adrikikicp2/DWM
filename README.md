@@ -23,8 +23,11 @@ The DWM decompiled source code is defined by:
 In a more aesthetic way, it should be represented as:
 
 DWM
+
 +---udwm
+
 |
+
 +---windowmanager
 
 # Building
