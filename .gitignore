@@ -1,0 +1,17 @@
+*/objfre_*_amd64
+*/objchk_*_amd64
+
+*/objfre_*_x86
+*/objchk_*_x86
+
+*.log
+*.wrn
+*.dat
+*.err
+
+.vscode/*.*
+
+bin/*.dll
+bin/*.dbg
+bin/*.pdb
+bin/*.exe

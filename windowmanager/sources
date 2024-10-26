@@ -1,0 +1,42 @@
+# Desktop Window Manager's uDWM.dll, built using the Windows Driver Kit
+
+
+
+TARGETNAME=dwm
+
+TARGETPATH=obj
+
+_NT386TREE=..\i386\
+_NTX64TREE=..\amd64\
+
+BINPLACE_PLACEFILE=..\bin\placefil.txt
+
+# It's a dll, so it's DYNLINK
+
+TARGETTYPE=PROGRAM
+
+TARGETLIBS=$(SDK_LIB_PATH)\kernel32.lib		      \
+       $(SDK_LIB_PATH)\advapi32.lib		      \
+       $(SDK_LIB_PATH)\gdi32.lib		      \
+       $(SDK_LIB_PATH)\user32.lib		      \
+       $(SDK_LIB_PATH)\ole32.lib		      \
+       $(SDK_LIB_PATH)\shlwapi.lib		      \
+       $(SDK_LIB_PATH)\shell32.lib		      \
+       $(SDK_LIB_PATH)\uuid.lib		      \
+       $(SDK_LIB_PATH)\uxtheme.lib		      \
+
+INCLUDES=$(ATL_INC_PATH)\atl71		  \
+
+SOURCES=windowmanager.cpp dwm.rc 
+
+UMTYPE=windows
+USE_MSVCRT=1
+
+!if !$(FREEBUILD)
+C_DEFINES = $(C_DEFINES) /D_DEBUG
+MSC_OPTIMIZATION=-Odi
+
+!else
+C_DEFINES = $(C_DEFINES) /DNDEBUG
+!endif
+
