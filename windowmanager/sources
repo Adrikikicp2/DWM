@@ -1,4 +1,4 @@
-# Desktop Window Manager's uDWM.dll, built using the Windows Driver Kit
+# Desktop Window Manager's dwm.exe, built using the Windows Driver Kit
 
 
 
@@ -6,14 +6,15 @@ TARGETNAME=dwm
 
 TARGETPATH=obj
 
-_NT386TREE=..\i386\
-_NTX64TREE=..\amd64\
+
 
 BINPLACE_PLACEFILE=..\bin\placefil.txt
 
-# It's a dll, so it's DYNLINK
+# It's an exe, so it's PROGRAM
 
 TARGETTYPE=PROGRAM
+
+PRECOMPILED_CXX=1
 
 TARGETLIBS=$(SDK_LIB_PATH)\kernel32.lib		      \
        $(SDK_LIB_PATH)\advapi32.lib		      \
@@ -24,19 +25,26 @@ TARGETLIBS=$(SDK_LIB_PATH)\kernel32.lib		      \
        $(SDK_LIB_PATH)\shell32.lib		      \
        $(SDK_LIB_PATH)\uuid.lib		      \
        $(SDK_LIB_PATH)\uxtheme.lib		      \
+       $(SDK_LIB_PATH)\oleaut32.lib		      \
+       $(SDK_LIB_PATH)\ntdll.lib		      \
+       $(ATL_LIB_PATH)\atl.lib                  \
+       $(ATL_LIB_PATH)\atls.lib                 \
+       $(ATL_LIB_PATH)\atlsd.lib                  \
+       $(ATL_LIB_PATH)\atlthunk.lib                 \
+
 
 INCLUDES=$(ATL_INC_PATH)\atl71		  \
+       $(DDK_INC_PATH)		  \
 
 SOURCES=windowmanager.cpp dwm.rc 
+
+PRECOMPILED_INCLUDE=precomp.h
+PRECOMPILED_OBJ=dwm.pch.obj
+PRECOMPILED_TARGET=dwm.pch
 
 UMTYPE=windows
 USE_MSVCRT=1
 
-!if !$(FREEBUILD)
-C_DEFINES = $(C_DEFINES) /D_DEBUG
-MSC_OPTIMIZATION=-Odi
+_NTTREE = ..\$(_BUILDARCH).binaries
 
-!else
-C_DEFINES = $(C_DEFINES) /DNDEBUG
-!endif
-
+TARGET_DESTINATION=system

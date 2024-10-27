@@ -3,7 +3,7 @@
 #ifndef PRECOMP_H
 #define PRECOMP_H
 
-#include <Windows.h>
+#include <windows.h>
 #include <shlwapi.h>
 #include "DesktopManager.h"
 

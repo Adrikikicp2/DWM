@@ -30,9 +30,9 @@
 
 #define	VER_FILESUBTYPE	VFT2_UNKNOWN
 
-#define VER_FILEDESCRIPTION_STR     "Desktop Window Manager"
+#define VER_FILEDESCRIPTION_STR     "Desktop Window Manaager"
 #define VER_INTERNALNAME_STR        "dwm.exe"
-#define VER_PRODUCTNAME_STR        "Microsoft Windows"
+
 #define VER_ORIGINALFILENAME_STR    "DWM.EXE"
 
 #include "common.ver"

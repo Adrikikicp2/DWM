@@ -6,22 +6,32 @@
 
 // Adrikikicp 2024-10-25 22:31 EST / EDT: Precompiled header includes all the files required, so it's mandatory to include it.
 
-#include "Precomp.h"
+#include "precomp.h"
 
 
 //
-// FUNCTION: wWinMain
+// FUNCTION: main
 // PURPOSE: Avoid link error
 //
+
 int main(){
 
+return 0;
 }
+
+//
+
+
+
+
 
 //
 // FUNCTION: wWinMain
 // PURPOSE: Main entry point of the application
 //
 INT APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, PWSTR pCmdLine, int nCmdShow){
+
+
 
     return main();
 }

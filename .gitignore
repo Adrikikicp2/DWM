@@ -10,8 +10,14 @@
 *.err
 
 .vscode/*.*
+.vscode
 
 bin/*.dll
 bin/*.dbg
 bin/*.pdb
 bin/*.exe
+
+*.cmd
+
+*.binaries/
+.binaries/

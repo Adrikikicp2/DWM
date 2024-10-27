@@ -3,19 +3,15 @@
 
 #include "precomp.h"
 
-class CDesktopManagerCriticalSection{
 
-    public:
-    LPCRITICAL_SECTION m_cs;
-};
 
 class CDesktopManager
 {
 
 public:
-CDesktopManagerCriticalSection s_csDwmInstance;
-DWORD __fastcall CDesktopManager::Create();
 
+static DWORD __fastcall Create();
+HRESULT __fastcall Initialize(CDesktopManager *desktopManager, const STARTUPINFO *pStartupInfo);
 };
 
 #endif // C_DESKTOP_MANAGER
