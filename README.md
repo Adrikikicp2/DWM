@@ -10,7 +10,7 @@ This decompilation is:
 
 - not for normal use, as ending normal DWM in Windows makes it unusable.
 
-For contributing, see [Contributing]
+
 
 # Source tree
 
@@ -26,6 +26,7 @@ In a more aesthetic way, it should be represented as:
 
 ```
 DWM
+
 +---udwm
 |
 +---windowmanager
@@ -35,7 +36,6 @@ DWM
 For building, you need the Windows 7.1.0 Driver Development Kit.
 
 After installation, run the x64 Checked (or free) Build Environment and put the following command: `build -cZP`. This will invoke the Build Utility (a.k.a Microsoft NT Build Engine) which will compile the Desktop Window Manager
-
 
 # Contributing
 For contributing, you need:
@@ -53,3 +53,4 @@ For commits, explain in complete sentences what your changes are.
 Example: "Update precomp.h to include a disclaimer to not remove the includes" and not just "Update precomp.h"
 
 If you want to make a new directory in the source tree, e-mail Adrikikicp at `adrikikicp@gmail.com`.
+
