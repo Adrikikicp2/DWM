@@ -1,4 +1,5 @@
 #include "DesktopManager.h"
+#include "BaseObject.h"
 #include "precomp.h"
 
 
