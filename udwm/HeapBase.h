@@ -19,7 +19,8 @@ namespace WPF
         virtual void Free(void* pv) = 0;
     };
 
-    void Alloc(size_t cbSize);
+    void* Alloc(size_t cbSize);
+    void* AllocClear(size_t cbSize);
 }
 
 #endif

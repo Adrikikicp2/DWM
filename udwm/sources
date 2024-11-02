@@ -27,6 +27,7 @@ INCLUDES=$(ATL_INC_PATH)\atl71		  \
 
 SOURCES=dllmain.cpp \
        precomp.cpp \
+       HeapBase.cpp \
        ProcessHeap.cpp \
        BaseObject.cpp \
        DesktopManager.cpp \
