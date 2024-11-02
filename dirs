@@ -1,2 +1,6 @@
-DIRS=udwm windowmanager
+DIRS=udwm \
+    windowmanager \
+    api \
+    core \
+    redir 
 

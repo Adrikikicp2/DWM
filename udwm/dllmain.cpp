@@ -44,9 +44,6 @@ if ((m_pStack - 1) == 0) {
 }
 
 
-
-
-
 result = hResult1;
 
 if(hResult1 < 0)
