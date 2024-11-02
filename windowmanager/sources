@@ -36,15 +36,23 @@ TARGETLIBS=$(SDK_LIB_PATH)\kernel32.lib		      \
 INCLUDES=$(ATL_INC_PATH)\atl71		  \
        $(DDK_INC_PATH)		  \
 
-SOURCES=windowmanager.cpp dwm.rc 
+SOURCES=windowmanager.cpp dwm.rc
 
 PRECOMPILED_INCLUDE=precomp.h
 PRECOMPILED_OBJ=dwm.pch.obj
 PRECOMPILED_TARGET=dwm.pch
 
+MSC_WARNING_LEVEL=/W3 /WX
+
 UMTYPE=windows
+UMENTRYABS=wWinMain
+
 USE_MSVCRT=1
 
 _NTTREE = ..\$(_BUILDARCH).binaries
 
 TARGET_DESTINATION=system
+
+
+SXS_MANIFEST=App.Manifest 
+
