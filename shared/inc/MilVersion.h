@@ -2,6 +2,18 @@
 
 #include "AvalonDebugP.h"
 
+HRESULT MilVersionCheck(unsigned int uiCallerMilSdkVersion)
+{
+    HRESULT hr = S_OK;
+
+    if (uiCallerMilSdkVersion != 0xB584C4DA)
+    {
+        hr = 0x88982F0B; // WINCODEC_ERR_UNSUPPORTEDVERSION
+    }
+
+    return hr;
+}
+
 int DwmVersionCheck(int versionToCheck){
 
     int result;
