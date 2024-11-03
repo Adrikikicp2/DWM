@@ -3,11 +3,8 @@
 #include "precomp.h"
 
 
+#define $S1 256
 
-int* m_pStack;
-
-HRESULT* HRESULTERRORLIST;
-DWORD* dwInstrument;
 
 
 DWORD WINAPI DwmClientStartup();
@@ -27,31 +24,35 @@ DwmClientStartup();
 // PURPOSE: DWM Client Startup
 
 DWORD WINAPI DwmClientStartup(){
-      HRESULT hResult1 = 0;
+      int dwmVersion;
     CDesktopManager *m_desktopManager;
-    unsigned int result;
-    HRESULT hResult2;
+    DWORD result;
 
 
   
 
 
 
-if ((m_pStack - 1) == 0) {
-       HRESULTERRORLIST[0] = -2147024846; 
-        dwInstrument = (DWORD *) -2003302655; 
-        m_pStack = (int *) 1u;
+if (($S1 - 1) == 0) {
+
+
+       MILINSTRUMENTATIONHRESULTLIST[0] = 0x80070032; 
+    MILINSTRUMENTATIONHRESULTLIST[1] = 0x88980701;
 }
 
+dwmVersion = DwmVersionCheck(0x88bde5e5);
 
-result = hResult1;
-
-if(hResult1 < 0)
-{
+if(-1 < dwmVersion){
+    result = CDesktopManager::Create();
+    if (-1 < (int)result){
     
-}else{
-    hResult2 = CDesktopManager::Create();
+        return result;
+    }
 }
+
+
+
+
 
 return result;
 

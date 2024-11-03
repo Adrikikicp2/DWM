@@ -1,0 +1,25 @@
+# Shared library between uDWM and dwm
+
+_NT386TREE=..\i386\
+_NTX64TREE=..\amd64\
+
+TARGETNAME=utillib
+
+TARGETPATH=lib
+
+TARGETTYPE=LIBRARY
+
+TARGETLIBS=$(SDK_LIB_PATH)\kernel32.lib              \
+       $(SDK_LIB_PATH)\advapi32.lib              \
+       $(SDK_LIB_PATH)\user32.lib              \
+
+INCLUDES=..\..\inc
+
+SOURCES=assert.cpp \
+       debugbreak.cpp \
+       registry.cpp \
+
+PRECOMPILED_CXX=1
+PRECOMPILED_INCLUDE=precomp.h
+PRECOMPILED_OBJ=utillib.pch.obj
+PRECOMPILED_TARGET=utillib.pch

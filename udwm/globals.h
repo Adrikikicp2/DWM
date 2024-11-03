@@ -1,0 +1,8 @@
+#ifndef GLOBALS_H
+#define GLOBALS_H
+
+#include <windows.h>
+
+HRESULT* MILINSTRUMENTATIONHRESULTLIST;
+
+#endif //GLOBALS_H

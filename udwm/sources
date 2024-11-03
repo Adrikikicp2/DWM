@@ -23,8 +23,8 @@ TARGETLIBS=$(SDK_LIB_PATH)\kernel32.lib		      \
        $(SDK_LIB_PATH)\uuid.lib		      \
        $(SDK_LIB_PATH)\uxtheme.lib		      \
 
-INCLUDES=$(ATL_INC_PATH)\atl71		  \
-        ..\shared\inc
+INCLUDES=..\shared\inc
+        
 
 SOURCES=dllmain.cpp \
        precomp.cpp \
