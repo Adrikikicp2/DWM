@@ -2,5 +2,6 @@ DIRS=udwm \
     windowmanager \
     api \
     core \
-    redir 
+    redir \
+    shared \
 
