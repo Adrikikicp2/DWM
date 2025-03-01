@@ -12,9 +12,9 @@ public:
     void operator delete(void* ptr);
     
     size_t __fastcall AddRef();
-    size_t __fastcall Release();
+    static size_t __fastcall Release(CBaseObject* object);
 private:
-    int m_cRef;
+  static  int m_cRef;
 };
 
 #endif // C_BASE_OBJECT

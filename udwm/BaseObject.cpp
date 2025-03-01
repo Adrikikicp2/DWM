@@ -16,9 +16,9 @@ size_t CBaseObject::AddRef() {
     return InterlockedIncrement((DWORD*)&m_cRef);
 }
 
-size_t CBaseObject::Release() {
+size_t CBaseObject::Release(CBaseObject* object) {
     InterlockedDecrement((DWORD*)&m_cRef);
     if (m_cRef < 1)
-        delete this;
+        delete object;
     return m_cRef;
 }
